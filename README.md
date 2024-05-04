@@ -25,6 +25,7 @@ else:
 This example will display` [((19.5, 9.0, 3.1), (0, 0, 0)), ((15.0, 5.5, 5.5), (0, 0, 31)), ((15.0, 5.5, 5.5), (0, 55, 31))]`, which means the rectangular prism (19.5,9.0,3.1) is not rotated and placed at position (0,0,0) (the lower left front corner of the box), and two rectangular prisms (15.0,5.5,5.5) are also not rotated, one placed at coordinates (0,0,31mm)=(0,0,3.1cm), and the other placed at (0, 55mm, 31mm)=(0, 5.5cm, 3.1cm).
 
 ##中文版
+
 众所周知，包装问题目前是一个NP-hard问题。受2024年北京高校数学建模校际联赛C题的启发，我开发了一种算法，试图找出三维包装问题的一个解。
 
 这是一个基于回溯算法编写的程序，主要通过搜索全部解空间来探究解的存在性。
