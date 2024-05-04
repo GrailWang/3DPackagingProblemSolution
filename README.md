@@ -13,9 +13,12 @@ It is worth noting that this algorithm can only solve when all the edge length d
 For example:
 
 ```
+import packing_check_v2 as pc
+
 box_dimensions = (22, 15, 9)  # Unit: centimeters
 items = [(15.0, 5.5, 5.5), (15.0, 5.5, 5.5), (19.5, 9.0, 3.1)]  # Unit: centimeters
-resulting_solutions = try_box(box_dimensions, items)
+resulting_solutions = pc.try_box(box_dimensions, items)
+
 if resulting_solutions:
     print(resulting_solutions[0])
 else:
@@ -34,9 +37,12 @@ This example will display` [((19.5, 9.0, 3.1), (0, 0, 0)), ((15.0, 5.5, 5.5), (0
 值得注意的是，这个算法只能解决包装箱和长方体块的所有边长数据有最小分度值的时候。例如，他们的精确度都是1mm，那么输入的时候请将所有的长度参数转化为厘米单位，这样最多能够接受有一位小数的输入。输出的参数中代表每个长方体块的旋转信息的tuple单位是厘米，代表坐标信息的tuple单位是毫米。
 例如：
 ```
+import packing_check_v2 as pc
+
 box_dimensions = (22, 15, 9)  #单位：厘米
 items = [(15.0, 5.5, 5.5), (15.0, 5.5, 5.5), (19.5, 9.0, 3.1)]  #单位：厘米
 resulting_solutions = try_box(box_dimensions, items)
+
 if resulting_solutions:
 print(resulting_solutions[0])
 else:
