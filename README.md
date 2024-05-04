@@ -1,5 +1,5 @@
-# 3DPackingProblemSolution
-As is known to all, packing problem is currently a NP-hard question. Inspired by Problem C of 2024 Beijing Intercollegiate Mathematical Modeling Competition, I develop an algorithm attempting to find out one solution of the 3D packing problem.
+# 3DPackagingProblemSolution
+As is known to all, packaging problem is currently a NP-hard question. Inspired by Problem C of 2024 Beijing Intercollegiate Mathematical Modeling Competition, I develop an algorithm attempting to find out one solution of the 3D packaging problem.
 
 
 This is a program written based on the backtracking algorithm, mainly exploring the existence of solutions by searching the entire solution space.
@@ -29,7 +29,7 @@ This example will display` [((19.5, 9.0, 3.1), (0, 0, 0)), ((15.0, 5.5, 5.5), (0
 
 ## 中文版
 
-众所周知，包装问题目前是一个NP-hard问题。受2024年北京高校数学建模校际联赛C题的启发，我开发了一种算法，试图找出三维包装问题的一个解。
+众所周知，装箱问题目前是一个NP-hard问题。受2024年北京高校数学建模校际联赛C题的启发，我开发了一种算法，试图找出三维装箱问题的一个解。
 
 这是一个基于回溯算法编写的程序，主要通过搜索全部解空间来探究解的存在性。
 调用函数时，你可以按照main()函数的示例。其中try_box函数需要传入的第一个参数是包装箱的长宽高（tuple类型），第二个参数是一个list类型，里面的元素是tuple，每一个tuple表示一个长方体的长宽高。你可以初始假定长方体的长大于等于宽大于等于高。
