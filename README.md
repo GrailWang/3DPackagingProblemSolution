@@ -1,7 +1,6 @@
 # 3DPackagingProblemSolution
 As is known to all, packaging problem is currently a NP-hard question. Inspired by Problem C of 2024 Beijing Intercollegiate Mathematical Modeling Competition, I develop an algorithm attempting to find out one solution of the 3D packaging problem.
 
-
 This is a program written based on the backtracking algorithm, mainly exploring the existence of solutions by searching the entire solution space.
 
 When calling the function, you can follow the example in the main() function. The try_box function requires two parameters: the first parameter is the dimensions of the box (tuple type), and the second parameter is a list type containing tuples, where each tuple represents the dimensions of a rectangular prism. You can initially assume that the length of the rectangular prism is greater than or equal to its width, and its width is greater than or equal to its height.
@@ -33,9 +32,13 @@ This example will display` [((19.5, 9.0, 3.1), (0, 0, 0)), ((15.0, 5.5, 5.5), (0
 
 这是一个基于回溯算法编写的程序，主要通过搜索全部解空间来探究解的存在性。
 调用函数时，你可以按照main()函数的示例。其中try_box函数需要传入的第一个参数是包装箱的长宽高（tuple类型），第二个参数是一个list类型，里面的元素是tuple，每一个tuple表示一个长方体的长宽高。你可以初始假定长方体的长大于等于宽大于等于高。
+
 运行后，如果找到一个解，可以立即返回这个解。解的格式是一个list，里面有很多个tuple，每个tuple表示一个长方体块的摆放方式。tuple里面包含了两个tuple，第一个是长方体块平行于包装箱长、宽、高三边的长度，主要反映了长方体块的旋转情况；第二个是长方体块左下前角的坐标。这个坐标是以包装箱左下前角为原点，包装箱的长为x轴，宽为y轴，高为z轴建立的空间直角坐标系中的坐标。如果找不到，返回空列表[]。
+
 值得注意的是，这个算法只能解决包装箱和长方体块的所有边长数据有最小分度值的时候。例如，他们的精确度都是1mm，那么输入的时候请将所有的长度参数转化为厘米单位，这样最多能够接受有一位小数的输入。输出的参数中代表每个长方体块的旋转信息的tuple单位是厘米，代表坐标信息的tuple单位是毫米。
+
 例如：
+
 ```
 import packing_check_v2 as pc
 
@@ -48,4 +51,5 @@ if resulting_solutions:
 else:
     print('装不进去。')
 ```
+
 这个例子会显示`[((19.5, 9.0, 3.1), (0, 0, 0)), ((15.0, 5.5, 5.5), (0, 0, 31)), ((15.0, 5.5, 5.5), (0, 55, 31))]`，即长方体块(19.5,9.0,3.1)不用旋转，放在(0,0,0)的位置（包装箱的左下前角），两个长方体块(15.0,5.5,5.5)也不用旋转，一个放在坐标(0,0,31mm)=(0,0,3.1cm)处，另一个放在(0, 55mm, 31mm)=(0, 5.5cm, 3.1cm)处。
